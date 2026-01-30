@@ -15,7 +15,7 @@ public class Motocicleta extends Vehiculo {
         this.cilindrada = cilindrada;
         this.ruedas = ruedas;
     }
-    // constructor sin parametros
+    // Constructor sin parametros
     public Motocicleta(){
         super("", 0);
         this.cilindrada = 0;
@@ -37,7 +37,7 @@ public class Motocicleta extends Vehiculo {
     }
 
     @Override
-    public double calcularTarifa() {   
-        return getTarifaPorHora();
+    public double calcularTarifa(int horas) {
+        return horas * tarifaPorHora;
     }
 }

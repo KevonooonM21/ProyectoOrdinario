@@ -1,7 +1,7 @@
 
 package SistemaCobro;
 
-public abstract class Vehiculo implements Descuento {
+public abstract class Vehiculo{
     protected String tipoVehiculo;
     protected double tarifaPorHora;
 
@@ -10,7 +10,7 @@ public abstract class Vehiculo implements Descuento {
     }
     
     //Constructor con parámetros
-    public Vehiculo (String tipoVehiculo, double tarifaporhora){
+    public Vehiculo (String tipoVehiculo, double tarifaPorHora){
         this.tipoVehiculo = tipoVehiculo;
         this.tarifaPorHora = tarifaPorHora;
     }
@@ -23,7 +23,6 @@ public abstract class Vehiculo implements Descuento {
     public String getTipo(){
         return tipoVehiculo;
     }
-
     public void settTarifaPorHora(double tarifaPorHora){
         this.tarifaPorHora = tarifaPorHora;
     }
@@ -31,8 +30,12 @@ public abstract class Vehiculo implements Descuento {
     public double getTarifaPorHora(){
         return tarifaPorHora;
     }
+    public double setTarifaPorHora(){
+        return tarifaPorHora;
+    }   
 
-    //Implementación del método abstracto de calcularTarifa
-    public abstract double calcularTarifa();
+    // Metodo abstracto para calcular la tarifapor hora
+    public abstract double calcularTarifa(int horas);
 
 }
+

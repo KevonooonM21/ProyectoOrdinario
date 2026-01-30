@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package SistemaCobro;
-
 /**
  *
  * @author angel
@@ -43,8 +42,7 @@ public class Automovil extends Vehiculo{
     }
 
     @Override
-    public double calcularTarifa() {   
-        return getTarifaPorHora();
-    }    
-
+    public double calcularTarifa(int horas) {
+        return horas * tarifaPorHora;
+    }
 }
